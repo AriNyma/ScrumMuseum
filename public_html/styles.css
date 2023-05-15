@@ -1,0 +1,204 @@
+*{
+   font-family: sans-serif;
+   padding: 0;
+   margin: 0;
+}
+::placeholder{
+   color: antiquewhite;
+}
+
+#museo_logo{
+   width: 70px;
+   height: auto;
+   align-self: center;
+   filter: drop-shadow(0mm -1mm 1mm rgb(160, 0, 210));
+}
+
+header{
+   background-color: rgb(19, 20, 20);
+   display: flex;
+   justify-content: center;
+   padding: 2vh;
+   
+   font-weight: 900;
+}
+h1{
+   color: whitesmoke;
+}
+
+#main{
+   position: relative;
+   height: 100vh;
+   background-color: rgb(19, 20, 20);
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   
+    
+}
+
+#chartscreen{
+   background-color: lightskyblue;
+   height: 50vh;
+   border-radius: 15px;
+   margin: 20px;
+
+   max-width: 75vw;
+   width: 900px;
+   max-height: 50vh;
+   
+}
+
+#datasheet{
+   margin: 10px;
+   max-width: 75vw;
+   width: 600px;
+}
+#databuttons{
+   flex-direction: row;
+}
+
+
+#subheader h1{
+   margin-top: 1vh;
+   text-align: center;
+}
+
+#form{
+   margin-top: 50px;
+   background-color: rgba(99, 102, 106, 0.7);
+   border: 2px;
+   border-style: solid;
+   z-index: 100;
+   min-height: 100px;
+   min-width: 200px;
+   width: 300px;
+   
+   align-self:center;
+   padding: 15px;
+   box-shadow: 0px 0px 40px rgb(160, 0, 210);
+   transition: 0.25px;
+   
+   
+   
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: space-between;
+   border-radius: 15px;
+
+   
+}
+
+#form h1{
+   padding-top: 2%;
+   padding-bottom: 2%;
+}
+
+#form input[type="text"], #form input[type="password"]{
+   margin: 10px auto;
+   border: 0;
+   background: none;
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 15px;
+   padding: 5px;
+   color: antiquewhite;
+}
+#form input:hover{
+   background-color: gray;
+}
+#form input:focus{
+   background-color: gray;
+}
+
+#form input[type="submit"]{
+   margin: 20px auto;
+   width: 100px;
+   margin-bottom: 5%;
+   padding: 5px;
+   border: none;
+   border: 3px solid black;
+   border-radius: 15px;
+   background-color: rgb(158, 65, 146);
+   font-weight: 800;
+}
+#form input[type="submit"]:hover{
+   background-color: grey;
+}
+#form input[type="submit"]:active{
+   transform: scale(0.98 , 0.98);
+}
+
+#logout{
+   margin: 20px;
+   margin-bottom: 5%;
+   padding: 4px;
+   border: none;
+   border: 4px solid black;
+   border-radius: 15px;
+   background-color: rgb(158, 65, 146);
+   font-weight: 800;
+}
+#logout:hover{
+   background-color: grey;
+}
+#logout:active{
+   transform: scale(0.98 , 0.98);
+}
+
+label{
+   font-weight: 600;
+}
+
+
+
+footer{
+   
+   padding: 2vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+ p{   
+   padding: 1vh;
+   font-weight: 600;
+   border: 3px;
+   border-style: solid;
+   border-radius: 15px;
+   text-align: center;
+   background-color: lightgrey;
+   
+ }
+
+ 
+
+ #buttoncontainer{
+   display: flex;
+   flex-direction: column;
+   padding: 1vh;
+   justify-content: center;
+   justify-content: space-evenly;
+   margin-left: 25%;
+   margin-right: 25%;
+
+ }
+
+ #buttoncontainer button{
+   z-index: 100;
+   height: 10vh;
+   max-width: 400px;
+   width: 70vw;
+   border: none;
+   background-color: rgba(99, 102, 106, 0.85);
+   border: 4px solid black;
+   border-radius: 20px;
+ }
+ #buttoncontainer button:hover{
+   background-color: grey;
+}
+#buttoncontainer button:active{
+   transform: scale(0.98 , 0.98);
+}
