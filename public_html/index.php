@@ -42,23 +42,23 @@
 
                 if ($data[0] == $username && $data[1] == $password && $data[2] == 1) 
                 {
-                    header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/museo1.php");
+                    header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/museo1.php");
                 }
                 else if ($data[0] == $username && $data[1] == $password && $data[2] == 2) 
                 {
-                    header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/museo2.php");
+                    header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/museo2.php");
                 }
                 else if ($data[0] == $username && $data[1] == $password && $data[2] == 3) 
                 {
-                    header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/museo3.php");
+                    header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/museo3.php");
                 }
                 else if ($data[0] == $username && $data[1] == $password && $data[2] == 4) 
                 {
-                    header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/museo4.php");
+                    header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/museo4.php");
                 }
                 else if ($data[0] == $username && $data[1] == $password && $data[2] == "admin") 
                 {
-                    header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/admin.php");
+                    header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/admin.php");
                 }
 
             }

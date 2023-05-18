@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="museum_sales.js" defer></script>
 </head>
 <body>
     <header>
