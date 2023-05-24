@@ -20,7 +20,7 @@
     
     <div id="main">
  
-        <form id="form" action="#" method="post" onsubmit="return verifypassword()">
+        <form id="form" action="#" method="post" onsubmit="post">
             <img id="museo_logo" src="media/museo.svg" >
             <h1>Museo Login</h1>
             <label>Username: </label>

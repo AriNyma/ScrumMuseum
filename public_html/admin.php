@@ -7,7 +7,7 @@
    else
    {
         //header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/index.php");
-        header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/index.php");
+51header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/index.php");
    }
    
 ?>
@@ -21,11 +21,14 @@
     <link rel="stylesheet" href="styles.css">
     <title>Admin Dash</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
     <script src="museum_sales.js" defer></script>
 </head>
 <body>
     <header>
         <h1> ADMIN PANEL</h1>
+        
+
     </header>
 
     <div id="main">
@@ -34,7 +37,8 @@
             <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/museo1.php">Museo 1 Dash  </a> 
             <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/museo2.php">Museo 2 Dash  </a>
             <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/museo3.php">Museo 3 Dash  </a> 
-            <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/museo4.php">Museo 4 Dash  </a> 
+            <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/museo4.php">Museo 4 Dash  </a>
+            <a href="http://www.cc.puv.fi/~e2203051/ketterat/museo/accounts.php"> accounts </a>
         </div>
         
         
@@ -51,15 +55,19 @@
         <div id="databuttons">
             <button type="button" class="button" id="data_button1"> show total sales</button>
             <button type="button" class="button" id="data_button2"> visitors per day</button>
-            <button type="button" class="button" id="data_button3"> dataset 3</button>
-            <button type="button" class="button" id="data_button4"> dataset 4</button>
+            <button type="button" class="button" id="data_button3"> sales by ticket type</button>
+            <button type="button" class="button" id="download_excel_button"> download</button>
+
         </div>
 
         <button id="logout" class="logout"> LOGOUT </button>
 
     </div>
 
-    
+    <footer>
+        <p>&copy; SCRUM TEAM </p>
+
+    </footer>
     
 
 
