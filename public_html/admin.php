@@ -7,7 +7,7 @@
    else
    {
         //header("Location: http://www.cc.puv.fi/~e2203060/ketterat/museo/index.php");
-51header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/index.php");
+        header("Location: http://www.cc.puv.fi/~e2203051/ketterat/museo/index.php");
    }
    
 ?>
