@@ -19,16 +19,41 @@ header{
    display: flex;
    justify-content: center;
    padding: 2vh;
-   
    font-weight: 900;
+   
 }
 h1{
    color: whitesmoke;
+   
 }
 
 #main{
    position: relative;
    height: 100vh;
+   background-color: rgb(19, 20, 20);
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   
+    
+}
+#main2{
+   position: relative;
+   height: 85vh;
+   background-color: rgb(19, 20, 20);
+   display: flex;
+   flex-direction: row;
+   text-align: center;
+   align-items: center;
+   justify-content: space-evenly;
+   
+    
+}
+
+#main3{
+   
+
    background-color: rgb(19, 20, 20);
    display: flex;
    flex-direction: column;
@@ -48,7 +73,7 @@ h1{
 }
 
 #chartscreen{
-   background-color: lightskyblue;
+   background-color: rgb(190, 196, 196);
    height: 500px;
    border-radius: 15px;
    margin: 20px;
@@ -223,3 +248,73 @@ footer{
    background-color: darkorchid;
    transform: scale(0.98 , 0.98);
  }
+
+
+
+
+
+ #form1{
+   margin-top: 50px;
+   background-color: rgba(99, 102, 106, 0.7);
+   border: 2px;
+   border-style: solid;
+   z-index: 100;
+   min-height: 100px;
+   min-width: 200px;
+   width: 300px;
+   
+   align-self:center;
+   padding: 15px;
+   box-shadow: 0px 0px 40px rgb(168, 168, 168);
+   transition: 0.25px;
+   
+   
+   
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: space-between;
+   border-radius: 15px;
+
+   
+}
+
+#form1 h1{
+   padding-top: 2%;
+   padding-bottom: 2%;
+}
+
+#form1 input[type="text"], #form1 input[type="password"]{
+   margin: 10px auto;
+   border: 0;
+   background: none;
+   text-align: center;
+   border: 2px solid black;
+   border-radius: 15px;
+   padding: 5px;
+   color: antiquewhite;
+}
+#form1 input:hover{
+   background-color: gray;
+}
+#form1 input:focus{
+   background-color: gray;
+}
+
+#form1 input[type="submit"]{
+   margin: 20px auto;
+   width: 100px;
+   margin-bottom: 5%;
+   padding: 5px;
+   border: none;
+   border: 3px solid black;
+   border-radius: 15px;
+   background-color: rgb(158, 65, 146);
+   font-weight: 800;
+}
+#form1 input[type="submit"]:hover{
+   background-color: grey;
+}
+#form1 input[type="submit"]:active{
+   transform: scale(0.98 , 0.98);
+}
