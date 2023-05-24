@@ -3,10 +3,12 @@
 const inputSubmit = document.getElementById("logout");
 const data_button1 = document.getElementById("data_button1");
 const data_button2 = document.getElementById("data_button2");
+const data_button3 = document.getElementById("data_button3");
 
 inputSubmit.addEventListener("click", logout);
 data_button1.addEventListener("click", show_employee_sales);
 data_button2.addEventListener("click", show_daily_visitors);
+data_button3.addEventListener("click", show_sold_ticket_types);
 
 
 function logout() {
@@ -45,7 +47,6 @@ for (var i = 0; i < sites.length; i++) {
             
             //call function to draw chart on screen
             cashier_sales(myObj, museoID[i]);
-    
         }
         xmlhttp.open("GET", "get_data.php", true);
         xmlhttp.send();
@@ -144,6 +145,90 @@ function show_employee_sales() {
         }
     }
 
+}
+
+function ticket_type(data, museoID) {
+  console.log(data);
+  var NormTicket = 0, DiscTicket = 0, ChilTicket = 0;
+
+  // counts sales from JSON data
+  for (var i = 0; i < data.length; i++) {
+      
+      if (data[i].ticketType == "NormTicket 12" && data[i].museoID == museoID) {
+          NormTicket++; 
+      }
+      else if (data[i].ticketType == "DiscTicket 10" && data[i].museoID == museoID) {
+          DiscTicket++;  
+      }
+      else if (data[i].ticketType == "ChilTicket 06" && data[i].museoID == museoID) {
+          ChilTicket++; 
+      }              
+  }
+
+  const chart_canvas = document.getElementById('chartscreen');
+
+  new Chart(chart_canvas, {
+    type: 'pie',
+    data: {
+      labels: ['Normal ticket', 'Discount ticket', 'Child ticket'],
+      datasets: [{
+        label: 'Ticket type',
+        data: [NormTicket, DiscTicket, ChilTicket],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)', // Normal ticket color
+          'rgba(54, 162, 235, 0.7)', // Discount ticket color
+          'rgba(255, 206, 86, 0.7)' // Child ticket color
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)', // Normal ticket border color
+          'rgba(54, 162, 235, 1)', // Discount ticket border color
+          'rgba(255, 206, 86, 1)' // Child ticket border color
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+function show_sold_ticket_types(){
+  //clear chartscreen before drawing new
+  let chartStatus = Chart.getChart("chartscreen");
+  if (chartStatus != undefined) {
+      chartStatus.destroy();
+      //(or)
+      // chartStatus.clear();
+  }
+
+  // hide date filters when not in use. this function does not use dates
+  document.querySelector("#datepicker").style.visibility = "hidden"; 
+
+  for (var i = 0; i < sites.length; i++) {
+      // check for site to display right chart
+      if (window.location.toString().includes(sites[i])) {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onload = function() {
+              const myObj = JSON.parse(this.responseText);
+          
+              //console.log(myObj);
+              
+              //call function to draw chart on screen
+              ticket_type(myObj, museoID[i]);
+      
+          }
+          xmlhttp.open("GET", "get_data.php", true);
+          xmlhttp.send();
+          break;
+      }
+  }
 }
 
 function show_daily_visitors() {
@@ -276,3 +361,5 @@ function sort_visitor_data(data, museoID) {
     //console.log(new_dates);
     //console.log(new_values);
   }
+
+  
